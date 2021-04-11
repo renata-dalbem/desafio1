@@ -39,7 +39,7 @@ jobs:
       - run: npm install
       
       #executar os testes usando o mocha
-      - run: npm run cy:run
+      - run: npx cypress run
       
       #gerar relatório em html
       - run: npm run report:mocha
