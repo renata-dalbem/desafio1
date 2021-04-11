@@ -29,12 +29,13 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
       
+      #setup do node.JS
       - name: Setup Node.js environment
         uses: actions/setup-node@v2.1.5
-      
-      with:
-        node-version: $({{matrix.node-version}}
-        #instalar as dependencias
+        with:
+          node-version: $({{matrix.node-version}}
+       
+      #instalar as dependencias
       - run: npm install
       
       #executar os testes usando o mocha
