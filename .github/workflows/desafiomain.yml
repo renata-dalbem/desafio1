@@ -42,9 +42,8 @@ jobs:
       - run: npm run report:merge
       - run: npm run report:mocha
       
-      #publicar relatório em html
-      - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@4.1.1
+- name: Deploy to GithubPages
+        uses: JamesIves/github-pages-deploy-action@3.7.1
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: gh-pages
