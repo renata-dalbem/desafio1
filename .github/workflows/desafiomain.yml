@@ -38,7 +38,7 @@ jobs:
     # instalando as dependencias
     - run: npm install
     
-    # executar os testes usando o cucumber
+    # executar os testes usando o mocha
     - run: npx cypress run
     
     # gerar o relatorio em html
@@ -47,7 +47,7 @@ jobs:
     
     # publicar relatorio em html
     - name: Deploy to GithubPages
-      uses: JamesIves/github-pages-deploy-action@4.1.1
+      uses: JamesIves/github-pages-deploy-action@3.7.1
       with:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         BRANCH: gh-pages
